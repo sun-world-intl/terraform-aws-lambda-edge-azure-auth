@@ -75,7 +75,7 @@ resource "aws_lambda_function" "this" {
   function_name    = var.function_name
   role             = aws_iam_role.lambda-role.arn
   handler          = "index.handler"
-  runtime          = "nodejs12.x"
+  runtime          = "nodejs20.x"
   publish          = true
 
   tags = var.tags
