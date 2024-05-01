@@ -1,7 +1,7 @@
 locals {
-  lambda_version          = "0.3.3"
+  lambda_version          = "0.4.0"
   lambda_filename         = "lambda-edge-azure-auth-${local.lambda_version}.zip"
-  lambda_repo             = "https://github.com/nickshine/lambda-edge-azure-auth"
+  lambda_repo             = "https://github.com/sun-world-intl/lambda-edge-azure-auth"
   oidc_discovery_document = "https://login.microsoftonline.com/${var.tenant}/v2.0/.well-known/openid-configuration"
   session_duration        = var.session_duration * 60 * 60                  # hours to seconds
   callback_path           = regex("https?://.*(/.*$)", var.redirect_uri)[0] # Endpoint used for the OAuth2 AuthCode Redirect URI
